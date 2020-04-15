@@ -8,18 +8,20 @@
             int len=a.length();
             int v=0;
             int count = 0;
+            int r=len;
             while (count != len) {
-                v=len-a.length();
+                v=len-r;
                 v=count-v;
                 String temp=Character.toString(b.charAt(count));
                 if(temp.equals("#") && v!=0) {
 
                     a.deleteCharAt(v-1);
                     a.deleteCharAt(v-1);
-
+                    r=r-2;
                 }
                 else if(temp.equals("#") && v==0) {
                     a.deleteCharAt(v);
+                    r=r-1;
                 }
 
                 count = count + 1;
@@ -28,18 +30,20 @@
             len=d.length();
             v=0;
             count=0;
+            r=len;
             while (count != len) {
-                v=len-c.length();
+                v=len-r;
                 v=count-v;
                 String temp=Character.toString(d.charAt(count));
                 if(temp.equals("#") && v!=0) {
 
                     c.deleteCharAt(v-1);
                     c.deleteCharAt(v-1);
-
+                    r=r-2;
                 }
                 else if(temp.equals("#") && v==0) {
                     c.deleteCharAt(v);
+                    r=r-1;
                 }
 
                 count = count + 1;
